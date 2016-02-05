@@ -1,0 +1,13 @@
+---
+# defaults file for ansible-mono
+
+# Debian/ubuntu variables
+mono_keyserver: hkp://keyserver.ubuntu.com:80
+mono_recv_key: 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+
+mono_apt_repository: deb http://download.mono-project.com/repo/debian wheezy main
+mod_mono_apt_repository: deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main
+
+# Centos Variables
+
+# Redhat variables

@@ -1,0 +1,8 @@
+---
+# tasks file for ansible-mono
+
+- include: install-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include: install-Redhat.yml
+  when: ansible_os_family == 'Redhat'

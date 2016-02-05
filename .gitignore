@@ -1,0 +1,52 @@
+.vendor/
+cache/
+__SculpinTestProject__/
+
+# Excluding ansible for now
+# ansible/
+
+# Excluding ansible for now
+build/
+
+# Exclude Vagrant files
+.vagrant/
+
+# Exclude virtualenv
+venv
+
+# build products...
+*.py[co]
+build
+# Emacs backup files...
+*~
+.\#*
+# RPM stuff...
+MANIFEST
+dist
+rpm-build
+# Eclipse/PyDev stuff...
+.project
+.pydevproject
+# PyCharm stuff...
+.idea
+# Mac OS X stuff...
+.DS_Store
+# manpage build stuff...
+docs/man/man3/*
+# Sublime stuff
+*.sublime-project
+*.sublime-workspace
+# docsite stuff...
+docsite/rst/modules
+docsite/*.html
+docsite/_static/*.gif
+docsite/_static/*.png
+docsite/_static/websupport.js
+# deb building stuff...
+debian/
+.kitchen/
+.kitchen.local.yml
+
+# Chef
+chefignore
+Gemfile.lock

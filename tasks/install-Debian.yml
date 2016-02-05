@@ -1,0 +1,26 @@
+---
+# tasks file for ansible-mono
+- name:  Add an apt key by id from a keyserver
+  apt_key: keyserver={{ mono_keyserver }} id={{ mono_recv_key }} state=present
+  tags:
+    - install
+
+- name: Add source repository into sources list.
+  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes
+  tags:
+    - install
+
+- name: Enable mod_mono installation on Ubuntu 13.10 and later, and Debian 8.0 and later
+  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main' state=present update_cache=yes
+  tags:
+    - install
+
+- name: Install Mono dependencies
+  apt: pkg={{ item }} state=installed
+  with_items:
+     - mono-devel
+     - mono-complet
+     - referenceassemblies-pcl
+     - ca-certificates-mono
+  tags:
+     - install
