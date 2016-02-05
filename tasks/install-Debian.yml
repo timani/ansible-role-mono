@@ -10,11 +10,10 @@
   apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main' state=present update_cache=yes
 
 - name: Install Mono dependencies
-  apt: pkg={{ item }} state=installed
+  apt: pkg={{ item }} state=installed update_cache=yes
   with_items:
+     - mono-xsp4
      - mono-devel
      - mono-complete
      - referenceassemblies-pcl
      - ca-certificates-mono
-  tags:
-     - install
