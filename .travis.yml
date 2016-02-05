@@ -33,5 +33,5 @@ script:
     
   # Check if mono packages are installed and working.
   - mcs --about
-  - mono
-  - xsp4
+  - mono --version
+  - xsp4 --version
