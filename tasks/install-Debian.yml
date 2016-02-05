@@ -15,4 +15,5 @@
      - mono-devel
      - mono-complete
      - mono-xsp4
+     - ca-certificates-mono
      - referenceassemblies-pcl
