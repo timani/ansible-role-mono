@@ -1,8 +1,18 @@
 ---
 # tasks file for ansible-mono
 
-- include: install-Debian.yml
-  when: ansible_os_family == 'Debian'
+- include: install-ubuntu-precise.yml
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'precise'
+  
+- include: install-ubuntu-trust.yml
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty'
 
-- include: install-Redhat.yml
-  when: ansible_os_family == 'Redhat'
+# @TODO better verion detection
+- include: install-centos-6.yml
+  when: ansible_distribution == 'Centos' and ansible_lsb.major_release|int >= '6'
+  
+- include: install-centos-7.yml
+  when: ansible_distribution == 'Centos' and ansible_lsb.major_release|int >= '7'
+  
+- include: install-redhat.yml
+  when: ansible_distribution == 'Redhat' 
