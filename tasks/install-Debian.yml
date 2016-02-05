@@ -6,7 +6,9 @@
 - name: Add source repository into sources list.
   apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes
 
-- name: Install Mono dependencies
-  apt: pkg={{ item }} state=installed update_cache=yes state=build-dep
+- name: Install Mono runtime, mcs and xsp4
+  apt: pkg={{ item }} state=present state=build-dep
   with_items:
      - mono-runtime
+     - mono-mcs
+     - mono-xsp4
