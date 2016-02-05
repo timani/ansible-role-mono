@@ -12,7 +12,6 @@
 - name: Install Mono dependencies
   apt: pkg={{ item }} state=installed update_cache=yes state=build-dep
   with_items:
-     - mono-devel
-     - mono-complete
+     - mono
      - referenceassemblies-pcl
      - ca-certificates-mono
