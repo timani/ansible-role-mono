@@ -19,7 +19,7 @@
   apt: pkg={{ item }} state=installed
   with_items:
      - mono-devel
-     - mono-complet
+     - mono-complete
      - referenceassemblies-pcl
      - ca-certificates-mono
   tags:
