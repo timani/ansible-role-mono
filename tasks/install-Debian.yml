@@ -13,6 +13,4 @@
   apt: pkg={{ item }} state=installed update_cache=yes state=build-dep
   with_items:
      - mono-devel
-    # - mono-complete
-     - referenceassemblies-pcl
-     - ca-certificates-mono
+     - mono-complete
