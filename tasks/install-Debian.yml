@@ -4,15 +4,11 @@
   apt_key: keyserver={{ mono_keyserver }} id={{ mono_recv_key }} state=present
 
 - name: Add source repository into sources list.
-  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes
-
-- name: Enable mod_mono installation on Ubuntu 13.10 and later, and Debian 8.0 and later
-  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main' state=present update_cache=yes
+  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes filename='mono-xamarin'
 
 - name: Install Mono dependencies
   apt: pkg={{ item }} state=installed update_cache=yes state=build-dep
   with_items:
      - mono-devel
      - mono-complete
-     - ca-certificates-mono
      - referenceassemblies-pcl
