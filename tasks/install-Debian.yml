@@ -4,7 +4,7 @@
   apt_key: keyserver={{ mono_keyserver }} id={{ mono_recv_key }} state=present
 
 - name: Add source repository into sources list.
-  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes filename='mono-xamarin'
+  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes
 
 - name: Install Mono dependencies
   apt: pkg={{ item }} state=installed update_cache=yes state=build-dep
