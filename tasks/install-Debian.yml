@@ -14,3 +14,4 @@
   with_items:
      - mono-devel
      - mono-complete
+     - referenceassemblies-pcl
