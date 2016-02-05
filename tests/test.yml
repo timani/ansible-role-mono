@@ -1,1 +1,3 @@
-# Test the mono role
+# Test the mono role---
+- hosts: localhost
+  remote_user: root
