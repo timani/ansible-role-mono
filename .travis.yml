@@ -31,6 +31,6 @@ script:
 
   # Check if mono packages are installed and working.
   - lsb_release -a
-  - mcs
+  - mcs --about
   - mono
   - xsp4
