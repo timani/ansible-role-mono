@@ -4,7 +4,7 @@
 - include: install-ubuntu-precise.yml
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'precise'
   
-- include: install-ubuntu-trust.yml
+- include: install-ubuntu-trusty.yml
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty'
 
 # @TODO better verion detection
