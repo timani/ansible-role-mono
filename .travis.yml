@@ -6,9 +6,7 @@ matrix:
       dist: trusty
       sudo: required
       python: "2.7"
-
-env:
-  - SITE=test.yml
+      env: SITE=test.yml
 
 before_install:
   - sudo apt-get update -qq
@@ -38,4 +36,3 @@ script:
   # Check if mono packages are installed and working.
   - mcs --version
   - mono --version
-  #  - xsp4 --version
