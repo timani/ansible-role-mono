@@ -1,0 +1,6 @@
+# Test the mono role---
+- hosts: localhost
+  remote_user: root
+
+  roles:
+    - ansible-role-mono

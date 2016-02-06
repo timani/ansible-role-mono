@@ -1,0 +1,7 @@
+---
+# tasks file for Redhat linux based Fedora systems (22, 23)
+- name: Install Mono runtime, mcs and xsp4
+  dnf: pkg={{ item }} state=present
+  with_items:
+     - mono-core.x86_64
+     - xsp
