@@ -1,14 +1,7 @@
 ---
 # tasks file for Redhat linux based Fedora systems (22, 23)
-- name:  Add an apt key by id from a keyserver
-  apt_key: keyserver={{ mono_keyserver }} id={{ mono_recv_key }} state=present
-
-- name: Add source repository into sources list.
-  apt_repository: repo='deb http://download.mono-project.com/repo/debian wheezy main' state=present update_cache=yes
-
 - name: Install Mono runtime, mcs and xsp4
-  apt: pkg={{ item }} state=present state=build-dep
+  dnf: pkg={{ item }} state=present
   with_items:
-     - mono-runtime
-     - mono-mcs
-     - mono-xsp4
+     - mono-core.x86_64
+     - xsp
