@@ -1,12 +1,21 @@
-Role Name
+Ansible Mono Role [![Build Status](https://travis-ci.org/timani/ansible-role-mono.svg?branch=master)](https://travis-ci.org/timani/ansible-role-mono)
 =========
 
-A brief description of the role goes here.
+An Ansible role to install the Mono runtime and mcs compiler
 
 Requirements
 ------------
 
 Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+
+- Ubuntu
+    - Trusty
+    - Precise (Coming soon)
+- Fedora
+    - 22
+    - 23
+- Centos
+    - 7
 
 Role Variables
 --------------
@@ -25,7 +34,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: timani.ansible-role-mono, x: 42 }
 
 License
 -------
