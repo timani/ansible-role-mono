@@ -1,7 +1,11 @@
 ---
 language: python
 python: "2.7"
-dist: trusty
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
 
 env:
   - SITE=test.yml
