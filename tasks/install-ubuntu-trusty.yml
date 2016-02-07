@@ -1,8 +1,7 @@
 ---
 # tasks file for Ubuntu 14.04 Trusty
-- name: Install Mono runtime, mcs and xsp4
+- name: Install Mono runtime and mcs
   apt: pkg={{ item }} state=present state=build-dep
   with_items:
      - mono-runtime
      - mono-mcs
-     - mono-xsp4
