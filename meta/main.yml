@@ -144,6 +144,8 @@ galaxy_info:
   #- networking
   #- packaging
   #- system
+  - .net
+  - microsoft
   - web
 dependencies: []
   # List your role dependencies here, one per line.
